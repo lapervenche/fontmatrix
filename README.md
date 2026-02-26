@@ -17,5 +17,5 @@ https://www.mail-archive.com/undertype-users@gna.org/maillist.html
 Le projet a été initialement développé par Pierre Marchand entre 2007 et 2011. Il est actuellement en mode maintenance et n'est pas travaillé par un programmeur actif.
 
 Les versions Windows et macOS nécessitent de nouveaux contributeurs. Une version Flatpak est disponible sur
-[available on Flathub](https://flathub.org/apps/details/com.github.fontmatrix.Fontmatrix), 
+[Flathub](https://flathub.org/apps/details/com.github.fontmatrix.Fontmatrix), 
 une version AppImage pourrait être créée par des contributeurs intéressés.
