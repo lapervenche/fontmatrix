@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Manuel de l'utilisateur Fontmatrix - Interface utilisateur</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="helpbase.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<h2>Interface utilisateur</h2>
+
+<p>Fontmatrix possède des fonctionnalités implémentées de manière traditionnelle et d'autres moins conventionnelles.</p>
+
+<p>Les parties les plus importantes de l'interface utilisateur que vous verrez sont :</p>
+
+<ul>
+<li>La barre de menus, en haut de la fenêtre</li>
+<li>La zone principale, avec des onglets représentant un mode ou un autre</li>
+<li>La barre latérale <em>Parcourir les polices</em></li>
+<li>La barre latérale <em>Étiquettes</em></li>
+<li>La barre d'état</li>
+<li>L'icône de la zone de notification (System tray)</li>
+</ul>
+
+<h3>Barre de menus</h3>
+
+<p>Il n'y a rien de spécial dans la barre de menus de Fontmatrix. Les éléments de menu sont logiquement divisés en 7 menus de premier niveau :</p>
+
+<ul>
+<li>Le menu <em>Fichier</em> regroupe tout ce qui est lié à l'entrée et à la sortie</li>
+<li>Le menu <em>Éditer</em> regroupe tout ce qui est lié aux éléments actuellement sélectionnés ou filtrés dans la barre latérale de recherche de polices</li>
+<li>Le menu <em>Parcourir</em> contient les commandes de navigation dans la barre latérale des polices</li>
+<li>Le menu <em>Affichage</em> contrôle la visibilité des barres latérales</li>
+<li>Le menu <em>Scripts</em> regroupe tout ce qui est lié aux scripts internes</li>
+<li>Le menu <em>Service</em> regroupe divers outils supplémentaires que vous n'utilisez généralement pas au quotidien</li>
+<li>Le menu <em>Aide</em> permet d'ouvrir ce système d'aide et une boîte de dialogue À propos</li>
+</ul>
+
+<h3>Zone principale</h3>
+
+<p>La zone principale de la fenêtre utilise une interface à onglets pour séparer les différentes fonctionnalités. Les trois premiers onglets (<em>Informations sur la police</em>, <em>Exemple de texte</em> et <em>Glyphes</em>) sont liés à la visualisation des polices. Les trois autres onglets (<em>Aire de jeu</em>, <em>Classification</em> et <em>Comparer</em>) sont liés à l'affinage de la sélection de polices et à la sélection exacte de celles dont vous avez besoin par le biais de la comparaison.</p>
+
+<p>La zone principale et la barre latérale <em>Parcourir les polices</em> ont principalement une connexion unidirectionnelle : les modifications dans la barre latérale <em>Parcourir les polices</em> affectent le contenu de la zone principale et non l'inverse :</p>
+
+<ul>
+<li>L'onglet <a href="viewing_overview.html"><em>Informations sur la police</em></a> affiche un résumé de la police actuellement sélectionnée.</li>
+<li>L'onglet <a href="viewing_sample_text.html"><em>Exemple de texte</em></a> affiche un texte en utilisant la police actuellement sélectionnée.</li>
+<li>L'onglet <a href="viewing_glyphs_chart.html"><em>Glyphes</em></a> affiche un tableau des glyphes présents dans la police actuellement sélectionnée et regroupés par blocs Unicode.</li>
+<li>L'onglet <a href="comparisons_fonts.html"><em>Aire de jeu</em></a> permet de prévisualiser et de comparer des lignes de texte personnalisées rendues en utilisant la police actuellement sélectionnée.</li>
+<li>L'onglet <a href="comparisons_glyphs.html"><em>Comparer</em></a> permet de comparer les glyphes des polices sélectionnées dans la barre latérale <em>Parcourir les polices</em>.</li>
+</ul>
+
+<p>La seule exception est l'onglet <a href="search_in_panose.html"><em>Classification</em></a> qui a une connexion bidirectionnelle avec la barre latérale : il met à jour la liste des polices dans la barre latérale pour filtrer les polices ayant des caractéristiques PANOSE particulières définies et réagit aux changements dans la barre latérale.</p>
+
+<h3>Barre latérale Parcourir les polices</h3>
+
+<p>Cette barre latérale est la passerelle vers votre collection de polices. Ce qu'elle fait, en dehors de vous permettre de rechercher des polices en utilisant des requêtes de métadonnées (discuté dans un <a href="search_in_generic_metadata.html">chapitre dédié</a>), est a) la liste des polices déjà ajoutées à la base de données et b) la liste des polices disponibles dans le système local et les systèmes distants montés. Cette fonctionnalité est divisée en trois onglets.</p>
+
+<h4>Noms</h4>
+
+<p>Les polices déjà ajoutées à la base de données sont listées ici et triées alphabétiquement par la première lettre de la famille de polices. Elles sont également regroupées en plusieurs niveaux : le premier niveau est l'initiale du nom, le deuxième niveau est le nom de la famille et le dernier niveau est le nom de la variante (style). L'activation et la désactivation des polices sont expliquées <a href="management_activation.html">séparément</a>.</p>
+
+<p><img src="images/browse-fonts-names-tab.png" /></p>
+
+<p>Cliquer sur <em>Réduire ou développer</em> ouvre un menu déroulant avec des éléments contrôlant la vue de la hiérarchie décrite précédemment : vous pouvez soit réduire, soit développer les éléments jusqu'au groupe de la première lettre (niveau supérieur).</p>
+
+<p>Le bouton <em>Afficher les cases de police</em> bascule la visibilité des cases à cocher devant les familles de polices, vous permettant de les activer ou de les désactiver sélectivement dans le système.</p>
+
+<h4>Aperçus</h4>
+
+<p>Dans cet onglet, Fontmatrix affiche des exemples d'un court texte avec chaque police filtrée, triés alphabétiquement.</p>
+
+<p><img src="images/browse-fonts-previews-tab.png" /></p>
+
+<p>Le texte et la taille de la police des aperçus peuvent être modifiés en dessous des aperçus. Si vous utilisez un texte personnalisé, vous aimeriez peut-être activer les sous-titres pour chaque aperçu vous indiquant quelle police est utilisée. Cela peut être fait dans l'onglet <em>Affichage</em> de la boîte de dialogue <em>Préférences</em>, ainsi que le choix de la police et de la taille de police utilisées pour ces sous-titres.</p>
+
+<p>Par défaut, cependant, les aperçus affichent les noms des polices elles-mêmes. Cela est fait en utilisant des commandes spéciales avec des noms explicites : &lt;name&gt;, &lt;family&gt; et &lt;variant&gt;.</p>
+
+<h4>Dossiers</h4>
+
+<p><img src="images/browse-fonts-folders-tab.png" /></p>
+
+<p>Vous pouvez prévisualiser les caractères des polices installées listées dans la vue Polices de Windows, les caractères des polices listées dans la vue Liste, ou vous pouvez sélectionner n'importe quel dossier dans la vue Dossiers pour prévisualiser tous les caractères situés dans le dossier sélectionné.</p>
+
+<h3>Barre latérale Étiquettes</h3>
+
+<p>C'est ici que vous gérez les étiquettes et les attribuez aux polices actuellement sélectionnées. Des informations détaillées sur l'utilisation des étiquettes pour gérer votre collection de polices sont fournies dans un <a href="management_tags.html">chapitre dédié</a>.</p>
+
+<h3>Barre d'état</h3>
+
+<p>La barre d'état dans Fontmatrix n'est pas vraiment utilisée aussi largement que, par exemple, dans Inkscape. La partie gauche affiche des astuces pour les éléments de menu. La partie droite nomme la police actuellement sélectionnée et liste le nombre de polices actuellement filtrées.</p>
+
+<h3>Zone de notification (System tray)</h3>
+
+<p>La zone de notification, également connue sous le nom de <em>zone de notification</em>, est généralement située quelque part sur le panneau de l'environnement de bureau (ou l'un des panneaux existants). Sa fonction est de masquer les fenêtres des applications que vous ne voulez pas voir tout le temps.</p>
+
+<p>Parce que vous pourriez toujours vouloir contrôler certaines de ces applications (même fréquemment parfois), cliquer sur les icônes dans la zone de notification bascule généralement la visibilité de la fenêtre principale d'une application ou affiche un menu avec divers éléments. C'est exactement comme cela que cela fonctionne pour Fontmatrix : un clic droit de la souris bascule la visibilité de la fenêtre principale, et un clic gauche de la souris révèle un menu. Puisqu'il s'agit d'une fonctionnalité hautement facultative, vous pouvez l'activer ou la désactiver à partir de la boîte de dialogue <em>Préférences</em>. Des informations détaillées sur cette fonctionnalité sont fournies dans un <a href="setting_up_preferences_system_tray.html">chapitre dédié</a>.</p>
+
+</body>
+</html>

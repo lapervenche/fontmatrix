@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Manuel de l'utilisateur Fontmatrix - Contribuer - Tests et rapports</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2>Tests et rapports</h2>
+
+<h3>Tests</h3>
+
+<p>Les tests contribuent à rendre les applications solides comme un roc. Comme nous sommes un projet communautaire, nous comptons sur vous, oui &mdash; vous, nos chers utilisateurs.</p>
+
+<p>Nous ne vous encourageons pas vraiment à compiler le code source le plus instable et de pointe, mais si vous trouvez des bugs dans la dernière version publiée, n'hésitez pas à nous les signaler.</p>
+
+<h3>Plantages</h3>
+
+<p>Vous avez donc trouvé un moyen reproductible de faire planter Fontmatrix. Si vous êtes sous Linux, veuillez utiliser l'application appelée <b>gdb</b> pour créer un rapport que les programmeurs appellent <em>backtrace</em>. Voici comment procéder :</p>
+
+<ol>
+	<li>Installez gdb via le gestionnaire de paquets</li>
+	<li>Ouvrez un terminal</li>
+	<li>$ gdb fontmatrix</li>
+	<li>La console de gdb apparaît</li>
+	<li><tt>&gt; run</tt></li>
+	<li>Fontmatrix démarre, un peu plus lentement que d'habitude</li>
+	<li>Reproduisez le plantage</li>
+	<li>Retournez au terminal</li>
+	<li><tt>&gt; bt</tt></li>
+	<li>Copiez la sortie avec la souris et collez-la quelque part</li>
+	<li><tt>&gt; quit</tt></li>
+</ol>
+
+<p>Si vous êtes sous Windows ou Mac ou si vous n'avez tout simplement pas le temps de vous embêter avec gdb, au moins assumez et dites-nous exactement ce que vous avez fait.</p>
+
+<h3>Signalement de bugs et demande de fonctionnalités</h3>
+
+<p>Vous pouvez soumettre des rapports de bugs à notre 
+<a title="Aller sur https://gna.org/bugs/?func=additem&group=undertype" 
+href="https://gna.org/bugs/?func=additem&group=undertype">bugtracker</a> 
+(pas besoin de s'inscrire). Ne vous inquiétez pas du nom "Undertype", car Fontmatrix 
+appartenait à l'origine à ce projet plus vaste.</p>
+
+<p>Un bon rapport de bug utile contient :</p>
+
+<ol>
+	<li>Liste des actions ayant conduit au bug</li>
+	<li>Un backtrace, si l'application a planté (voir ci-dessus)</li>
+	<li>Informations sur votre système</li>
+</ol>
+
+<p>Les informations typiques sur votre système que nous apprécierions :</p>
+
+<ul>
+		<li>Linux : nom et version de la distribution, version de Qt, version de Fontmatrix</li>
+		<li>Mac&nbsp;OS&nbsp;X : version de Mac&nbsp;OS&nbsp;X, version de Fontmatrix</li>
+		<li>Windows : version de Windows, version de Fontmatrix</li>
+</ul>
+
+<p>Si vous souhaitez demander une nouvelle fonctionnalité, utilisez ce même traqueur.</p>
+
+</body>
+</html>

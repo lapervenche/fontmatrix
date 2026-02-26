@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Manuel de l'utilisateur Fontmatrix - Outils additionnels - Extraction de polices à partir de documents</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2>Extraction de polices à partir de documents</h2>
+
+<p>Cette fonctionnalité quelque peu controversée, l'extraction de polices intégrées à partir de documents, s'appuie sur la bibliothèque <a href="http://podofo.sourceforge.net">PoDoFo</a> et ne fonctionne actuellement que pour les documents PDF. La prise en charge de XPS et SVG est prévue pour des versions ultérieures.</p>
+
+<p>Pour l'utiliser</p>
+
+<ol>
+	<li>Choisissez <em>Service&nbsp;&gt; Extraire les polices...</em>.</li>
+	<li>Dans la section <em>Sélectionner un PDF</em> de la boîte de dialogue nouvellement ouverte, cliquez sur <b>Parcourir</b> et choisissez un document PDF d'intérêt.</li>
+	<li>Dans la section <em>Polices</em>, cochez les cases des polices qui vous intéressent.</li>
+	<li>Cliquez sur le bouton <b>Sélectionner le répertoire</b> pour définir le répertoire dans lequel les polices extraites seront enregistrées.</li>
+	<li>Cliquez sur le bouton <b>Extraire</b> pour enregistrer les polices intégrées dans le répertoire choisi.</li>
+	<li>Cliquez sur le bouton <b>Fermer</b> pour fermer la boîte de dialogue lorsque vous avez terminé.</li>
+</ol>
+
+<p>Si leur importation ultérieure dans Fontmatrix vous semble pertinente, faites-le.</p>
+
+<p>Plusieurs choses doivent être mentionnées concernant cette fonctionnalité.</p>
+
+<p>Tout d'abord, les polices sont rarement intégrées entièrement, donc ce que vous obtenez généralement est une police dite sous-ensemble, où seuls les glyphes réellement utilisés dans un document sont présents. Voici un exemple :</p>
+
+<p><img src="images/extracted-font-compact-encoding.png" /></p>
+
+<p>Ensuite, Fontmatrix enregistre ces polices au format PFB et stocke des informations utiles comme les instructions :</p>
+
+<p><img src="images/extracted-font-editing.png" /></p>
+
+<p>Enfin, pour les personnes soucieuses des droits d'auteur, Fontmatrix enregistre en fait cette information :</p>
+
+<p><img src="images/extracted-font-copyright-info.png" /></p>
+
+<p>Veuillez noter : <b>L'équipe Fontmatrix décourage fortement les utilisateurs d'enfreindre les droits d'auteur</b>. Nous avons implémenté cette fonctionnalité pour le plaisir et l'éducation, et non pour réaliser un profit non autorisé du travail d'autrui. Si vous souhaitez créer une œuvre dérivée à partir d'une police dont la licence ne l'autorise pas explicitement, veuillez contacter le concepteur ou le fournisseur au préalable.</p>
+
+</body>
+</html>
+

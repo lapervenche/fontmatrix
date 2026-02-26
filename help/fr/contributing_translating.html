@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Manuel de l'utilisateur Fontmatrix - Contribuer - Traduction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2>Traduction</h2>
+
+<h3>Traduction de l'entrée de bureau</h3>
+
+<p>Sur les systèmes Linux, les fichiers .desktop sont utilisés pour construire les menus système qui listent les applications disponibles aux utilisateurs. Fontmatrix est également fourni avec un tel fichier. Il est situé dans le répertoire racine avec le code source et est installé dans /usr/share/applications ou /usr/local/share/applications, selon vos préférences.</p>
+
+<p>Pour obtenir une entrée de menu localisée, vous devez faire une chose très simple :</p>
+
+<ol>
+<li>Ouvrez ce fichier dans votre éditeur de texte préféré et assurez-vous de l'ouvrir en tant que fichier texte encodé en UTF-8.</li>
+<li>Créez une nouvelle entrée qui ressemble à "Comment[LANG]=Un gestionnaire de polices", où LANG est un code à deux lettres pour votre langue (tel que référencé par <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639-1</a>) et tout ce qui suit "=" est traduit.</li>
+<li>Créez une nouvelle entrée qui ressemble à "GenericName[LANG]=Un gestionnaire de polices".</li>
+<li>Sauvegardez.</li>
+<li>Testez en exécutant 'sudo make install' (si Fontmatrix est déjà installé ou simplement 'sudo cp fontmatrix.desktop /usr/share/applications/') et regardez dans le menu.</li>
+</ol>
+
+<p><a href="contributing_testing.html">Envoyez</a>-nous le fichier mis à jour.</p>
+
+<h3>Traduction de l'interface utilisateur</h3>
+
+<p>La toute première chose dont vous avez besoin pour traduire Fontmatrix dans votre langue maternelle est d'obtenir le code source de la branche de développement actuelle. Pour ce faire, vous avez besoin d'un client Subversion (<span class="code">svn</span> étant le client en ligne de commande habituel). Ensuite, tapez </p>
+
+<p><tt>svn co http://svn.gna.org/svn/undertype/trunk/tools/typotek fontmatrix</tt></p>
+
+<p>quelque part dans votre répertoire personnel pour récupérer le code source, afin d'y avoir toujours accès.</p>
+
+<p>Ensuite, vous devrez installer le paquet de développement Qt qui contient Linguist &mdash; l'application pour vous aider à traduire. Sur Linux, démarrez votre gestionnaire de paquets et cherchez un paquet nommé quelque chose comme qt4-dev, installez-le.</p>
+
+<p>Les étapes suivantes sont les suivantes :</p>
+
+<ol>
+	<li>Allez dans le répertoire de niveau supérieur du code source.</li>
+	<li>Créez le répertoire de construction, par exemple : <span class="code">mkdir build</span> et accédez-y.</li>
+	<li>Exécutez la commande Cmake avec les options que vous souhaitez, plus -DTRANSLATOR:string=LOCALE, où LOCALE est un code à deux lettres pour votre langue (tel que référencé par <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639-1</a>), en minuscules, par exemple <em>fr</em> pour le français ou <em>de</em> pour l'allemand.
+	Si nécessaire, vous pouvez spécifier un code de pays et ainsi former une chaîne comme <em>fr_FR</em></li>
+	<li>Exécutez "make translation" pour créer un nouveau fichier de traduction dans le répertoire fontmatrix/src/messages/.</li>
+	<li>Ouvrez votre fichier fontmatrix-LOCALE.ts dans Linguist et commencez à traduire.</li>
+	<li>Pour tester votre traduction, exécutez <span class="code">make install</span> dans le répertoire de construction. Cela créera un fichier binaire appelé fontmatrix-LOCALE.qm (et Fontmatrix lui-même si vous n'avez pas exécuté cette commande auparavant) et l'installera au bon endroit. Si le LOCALE pour lequel vous traduisez n'est pas celui qui est défini pour votre système, exécutez <span class="code">LC_ALL=LOCALE fontmatrix</span> pour indiquer à Fontmatrix de charger ce LOCALE spécifique.</li>
+	<li>Lorsque votre travail est terminé, compressez ce fichier fontmatrix-LOCALE.ts dans une archive ZIP, GZ ou BZ2 et soumettez-le via <a href="contributing_testing.html">le suivi des correctifs et des patchs</a> ou informez-nous via <a href="resources.html">IRC</a> et nous vous aiderons à résoudre ce problème.</li>
+</ol>
+
+<p>Voici quelques conseils pour vous aider à améliorer la traduction.</p>
+
+<p>Traduire Fontmatrix prend du temps, il est donc préférable de traduire les parties de l'interface utilisateur que vous utilisez la plupart du temps. Cela vous donnera un faux, mais utile sentiment d'accomplissement et de motivation pour terminer tout le travail.</p>
+
+<p>Testez votre traduction aussi souvent que possible. C'est particulièrement important pour les dialogues que vous utilisez rarement.</p>
+
+<p>Assurez-vous de trouver un bon équilibre entre des phrases et des mots courts et faciles à comprendre. La langue anglaise est connue pour avoir des mots relativement plus courts, donc dans la plupart des cas, votre traduction rendra l'interface utilisateur un peu plus grande. Mais si vous commencez à utiliser des abréviations ou des synonymes plus courts qui ne correspondent pas tout à fait au contexte, les utilisateurs n'apprécieront pas non plus.</p>
+
+<p>Beaucoup de messages traduisibles utilisent des variables comme <em>%1</em>. Celles-ci sont remplacées par certaines valeurs. Par exemple, dans "Block (%1):" (onglet <em>Glyphes</em>), cette variable est substituée par le pourcentage de couverture d'un bloc Unicode choisi, par exemple : "Block (74%):". Lorsque vous tapez ces variables manuellement, vous pouvez faire une erreur et l'astuce avec une variable ne fonctionnera pas. Il est donc préférable de coller le texte original dans le champ de saisie de la traduction en appuyant sur <b>Ctrl</b>+<b>B</b> dans Linguist, puis de remplacer ce texte original par la traduction, en laissant toutes les variables présentes intactes.</p>
+
+<p>Une bonne partie des messages traduisibles sont des noms de blocs Unicode et de fonctionnalités OpenType. Même si ces technologies sont destinées à servir une vaste communauté mondiale avec toutes ses langues et écritures complexes, il est courant d'avoir peu ou pas d'informations à leur sujet dans une langue autre que l'anglais. C'est le 21ème siècle pour vous. Veuillez donc vous référer à de bons dictionnaires solides pour les noms corrects des langues utilisées pour la plupart des blocs Unicode, à la <a href="http://www.unicode.org/standard/standard.html">spécification Unicode</a> pour le reste des blocs et à la <a href="http://www.microsoft.com/typography/otspec/">spécification OpenType</a> pour les noms des fonctionnalités OpenType que vous voyez dans l'onglet <em>Exemple de texte</em>.</p>
+
+<h3>Traduction de la documentation</h3>
+
+<p>La documentation se trouve dans le répertoire <em>help</em> et se compose d'un fichier menu.xml qui définit la table des matières, de fichiers HTML avec du texte et des illustrations dans des fichiers PNG ou JPEG.</p>
+
+<p>Chaque traduction est conservée dans son propre répertoire nommé avec un code de langue à deux lettres comme <em>ru</em> pour le russe ou <em>es</em> pour l'espagnol. Téléchargez donc le code source, décompressez-le et commencez par créer ce répertoire.</p>
+
+<p>Copiez maintenant le contenu du répertoire <em>en</em> dans le répertoire de votre langue. Avant de commencer à traduire, ouvrez le fichier help/LANGUAGE/CMakeLists.txt dans votre éditeur préféré et remplacez toutes les instances de "_EN" par "_LANGUAGE", où LANGUAGE est également un code à deux lettres pour votre langue, en majuscules. Ensuite, ouvrez help/CMakeLists.txt et ajoutez une autre ligne qui ressemble à ceci :</p>
+
+<p>ADD_SUBDIRECTORY(${FM_HELP_DIR}LANGUAGE)</p>
+
+<p>où LANGUAGE est un code à deux lettres pour votre langue, cette fois en minuscules.</p>
+
+<p>Ces deux fichiers sont utilisés par le système de construction pour savoir quels fichiers installer.</p>
+
+<p>Commencez à traduire. Il est préférable de traduire d'abord la table des matières et de continuer avec le contenu réel plus tard. Pour traduire la table des matières, ouvrez le fichier menu.xml dans l'éditeur de votre choix et traduisez les valeurs de chaque attribut <em>text</em>. Par exemple, pour &lt;area text="Setting up" file="setting_up.html"&gt; le texte traduisible sera "Configuration".</p>
+
+<p>Pour tester votre traduction, ouvrez une fenêtre de terminal, allez dans le répertoire de niveau supérieur avec le code source, reconstruisez et réinstallez Fontmatrix. Après l'avoir reconstruit pour la première fois, vous n'aurez qu'à exécuter 'sudo make install' pour mettre à jour les fichiers.</p>
+
+<p>Si l'interface utilisateur n'est pas localisée, vous voudrez peut-être le faire avant de traduire la documentation. Certains utilisateurs pourraient se plaindre et vous dire que l'interface utilisateur en anglais est une norme de facto et que la documentation localisée ne devrait donc faire référence qu'à l'interface utilisateur anglaise. Mais c'est juste parce qu'ils ont grandi en utilisant des logiciels non localisés, alors ne vous inquiétez pas, laissez-les faire les malins et continuez.</p>
+
+<p>Certaines illustrations affichent en fait d'autres applications comme FontForge qui peuvent ne pas être localisées pour votre langue. Dans ce cas, utilisez simplement les captures d'écran déjà disponibles de la version anglaise de la documentation.</p>
+
+<p>Les traductions anglaise (et russe) ont des captures d'écran avec le thème <em>Dust</em> pour GTK+ et Metacity (et le moteur GTK+ pour Qt), et la police Droid Sans 9pt. Vous n'avez pas à essayer de reproduire cela, mais veuillez être visuellement cohérent dans toute votre traduction.</p>
+
+<p>Veuillez conserver toutes vos illustrations en dessous de 800 pixels sur le côté le plus long.</p>
+
+<p>Lorsque vous avez terminé, archivez le répertoire help/LANGUAGE avec votre traduction et <a href="contributing_testing.html">envoyez-le</a>-nous.</p>
+
+</body>
+</html>

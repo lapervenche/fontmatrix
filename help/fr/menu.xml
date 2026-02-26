@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<area text="Bienvenue" file="index.html">
+		<submenuitem text="Nouveautés" file="news.html"/>
+	</area>
+
+	<area text="Les bases" file="basics.html">
+		<submenuitem text="Pourquoi utiliser un gestionnaire de polices" file="why_management.html" />
+		<submenuitem text="Pourquoi Fontmatrix" file="why_fontmatrix.html" />
+<!--		<submenuitem text="What exactly fonts are" file="what_fonts_are.html" /> -->
+	</area>
+
+	<area text="Interface utilisateur" file="interface.html">
+	</area>
+
+	<area text="Gestion des polices" file="management.html">
+		<submenuitem text="Importation de polices" file="management_importing.html"/>
+		<submenuitem text="Activation et désactivation de polices" file="management_activation.html"/>
+		<submenuitem text="Utilisation des étiquettes" file="management_tags.html"/>
+	</area>
+
+	<area text="Visualisation des polices" file="viewing.html">
+		<submenuitem text="Aperçu des polices" file="viewing_overview.html"/>
+		<submenuitem text="Exemple de texte" file="viewing_sample_text.html"/>
+		<submenuitem text="Tableau des glyphes" file="viewing_glyphs_chart.html"/>
+	</area>
+
+	<area text="Recherche de polices" file="search.html">
+		<submenuitem text="Recherche par champs de métadonnées génériques" file="search_in_generic_metadata.html"/>
+		<submenuitem text="Recherche par métadonnées PANOSE" file="search_in_panose.html"/>
+		<submenuitem text="Recherche par échantillons bitmap" file="search_using_bitmap_samples.html"/>
+	</area>
+
+	<area text="Comparaisons" file="comparisons.html">
+		<submenuitem text="Comparaison de polices" file="comparisons_fonts.html"/>
+		<submenuitem text="Comparaison de glyphes" file="comparisons_glyphs.html"/>
+	</area>
+
+	<area text="Exportation et impression" file="output.html">
+		<submenuitem text="Exportation de polices" file="export_fonts.html"/>
+		<submenuitem text="Impression de polices" file="printing_fonts.html"/>
+	</area>
+
+	<area text="Catalogues de polices" file="font_books.html">
+		<submenuitem text="Création de catalogues de polices" file="creating_font_books.html"/>
+		<submenuitem text="Création de modèles de catalogues de polices" file="font_book_templates.html"/>
+	</area>
+
+	<area text="Outils additionnels" file="additional.html">
+<!--		<submenuitem text="Checking database" file="additional_db_check.html"/> -->
+		<submenuitem text="Édition des métadonnées PANOSE" file="additional_editing_panose.html"/>
+<!--		<submenuitem text="Viewing TrueType tables" file="additional_ttf_tables.html"/> -->
+		<submenuitem text="Extraction de polices à partir de documents" file="additional_extracting_fonts.html"/>
+<!--		<submenuitem text="Exporting font info for packaging" file="additional_export_for_packaging.html"/> -->
+	</area>
+
+	<area text="Scripting" file="scripting.html">
+	</area>
+
+	<area text="Configuration" file="setting_up.html">
+		<submenuitem text="Préférences" file="setting_up_preferences.html">
+			<submenuitem text="Général" file="setting_up_preferences_general.html"/>
+			<submenuitem text="Zone de notification" file="setting_up_preferences_system_tray.html"/>
+			<submenuitem text="Affichage" file="setting_up_preferences_display.html"/>
+			<submenuitem text="Service" file="setting_up_preferences_service.html"/>
+			<submenuitem text="Collection d'échantillons" file="setting_up_preferences_samples_collection.html"/>
+<!--			<submenuitem text="Files &amp; folders" file="setting_up_preferences_files_and_folders.html"/> -->
+			<submenuitem text="Raccourcis" file="setting_up_preferences_shortcuts.html"/>
+		</submenuitem>
+		<submenuitem text="Options du moteur de mise en page de texte" file="setting_up_layout_engine_options.html"/>
+	</area>
+
+	<area text="Contribuer à ce projet" file="contributing.html">
+		<submenuitem text="Tests et rapports" file="contributing_testing.html"/>
+		<submenuitem text="Traduction" file="contributing_translating.html"/>
+		<submenuitem text="Programmation" file="contributing_programming.html"/>
+	</area>
+
+	<area text="Ressources en ligne utiles" file="resources.html">
+	</area>
+
+	<area text="Outils externes" file="external_tools.html">
+	</area>
+
+</menu>

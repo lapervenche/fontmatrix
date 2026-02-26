@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Manuel de l'utilisateur Fontmatrix - Configuration - Options du moteur de mise en page de texte</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2>Options du moteur de mise en page de texte</h2>
+
+<p>Fontmatrix utilise son propre moteur de mise en page de texte (TLE) pour prendre en charge les fonctionnalités OpenType avancées. Lorsque le TLE recherche la meilleure coupure, il construit une liste de possibilités et attache la différence entre le nœud de coupure et la largeur de ligne à chaque nœud. À la fin, il sélectionne la liste qui a la plus petite distance.</p>
+
+<p>Étant donné que le TLE possède un certain nombre de variables que vous pouvez ajuster, elles peuvent être personnalisées à votre guise. Utilisez la commande <em>Service&nbsp;&gt; Options du moteur de mise en page de texte</em> pour ouvrir la boîte de dialogue.</p>
+
+<p>La boîte de dialogue ressemble beaucoup à un égaliseur audio : vous modifiez les poids de chaque variable, en faisant glisser le curseur de haut en bas.</p>
+
+<ul>
+<li>Avant&nbsp;&mdash; facteur appliqué à un nœud de coupure qui précède le premier nœud HORS_LIGNE</li>
+<li>Exact&nbsp;&mdash; facteur appliqué au premier nœud HORS_LIGNE</li>
+<li>Après&nbsp;&mdash; facteur appliqué aux nœuds qui suivent le premier nœud HORS_LIGNE</li>
+<li>Fin&nbsp;&mdash; facteur identique pour la dernière ligne du paragraphe</li>
+<li>Pénalité-H&nbsp;&mdash; super facteur appliqué au score du nœud, s'il s'agit d'un nœud de césure</li>
+<li>Compression maximale&nbsp;&mdash; compression maximale des espaces blancs</li>
+</ul>
+
+<p>Si vous avez réussi à lire jusqu'à cette phrase, vous êtes Pierre Marchand&nbsp;&mdash; développeur principal de Fontmatrix. Cela signifie également que le texte n'a jamais été amélioré pour devenir lisible par l'homme. Alors allez corriger ça, voulez-vous ? :) Dans le cas improbable où vous ne seriez pas Pierre, veuillez le signaler au traqueur de bugs.</p>
+
+</body>
+</html>
