@@ -2,27 +2,20 @@
 
 ![Screenshot](screenshot.png)
 
-Fontmatrix is a font management application for Linux, macOS, and Windows. 
+Fontmatrix est une application de gestion de polices pour Linux, macOS et Windows.
 
-It helps keeping your font collection in order, allowing you to enable and 
-disable availability of fonts and font families in your system. This is typically
-in demand by designers who tend to have huge collections of typefaces.
+Elle aide à maintenir votre collection de polices en ordre, vous permettant d'activer et de désactiver la disponibilité des polices et des familles de polices sur votre système. Ceci est généralement demandé par les designers qui ont tendance à posséder d'énormes collections de caractères.
 
-Searching for the right font in Fontmatrix is easy thanks to advanced support 
-for [PANOSE](https://en.wikipedia.org/wiki/PANOSE) and user defined filters,
-as well as tags.
+Rechercher la bonne police dans Fontmatrix est facile grâce à la prise en charge avancée de [PANOSE](https://en.wikipedia.org/wiki/PANOSE) et aux filtres définis par l'utilisateur, ainsi qu'aux étiquettes.
 
-Fontmatrix is also useful for type designers and enthusiasts, because it 
-simplifies testing of OpenType features and allows comparing fonts glyph by 
-glyph which is extremely useful for learning type design.
+Fontmatrix est également utile pour les créateurs de caractères et les passionnés, car il simplifie le test des fonctionnalités OpenType et permet de comparer les polices glyphe par glyphe, ce qui est extrêmement utile pour l'apprentissage de la conception de caractères.
 
-There is an extremely low-traffic mailing list available:
+Une liste de diffusion à très faible trafic est disponible :
 
 https://www.mail-archive.com/undertype-users@gna.org/maillist.html
 
-The project was originally developed by Pierre Marchand between 2007 and 2011.
-It is currently in maintenance mode and isn't worked on by any actual programmer.
+Le projet a été initialement développé par Pierre Marchand entre 2007 et 2011. Il est actuellement en mode maintenance et n'est pas travaillé par un programmeur actif.
 
-Windows and macOS builds require new contributors. Flatpak build is
+Les versions Windows et macOS nécessitent de nouveaux contributeurs. Une version Flatpak est disponible sur
 [available on Flathub](https://flathub.org/apps/details/com.github.fontmatrix.Fontmatrix), 
-AppImage build could be created by interested contributors.
+une version AppImage pourrait être créée par des contributeurs intéressés.
