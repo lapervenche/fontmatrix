@@ -1,21 +1,16 @@
-Fontmatrix documentation
 
-The very first thing you need to know is that documentation is a work in progress. 
+Documentation de Fontmatrix
 
-We will let you know when it's more or less settled, so that you don't waste 
-your precious time on trying to paint a speeding train :-)
+La première chose à savoir est que la documentation est un travail en cours.
 
-Anyway, this is how it works.
+Nous vous informerons lorsqu'elle sera plus ou moins stabilisée, afin que vous ne perdiez pas votre temps précieux à essayer de peindre un train en marche :-)
 
-Every translation has its own directory named after two-letter language code, 
-e.g. 'fr' fro French, 'de' for German, 'ru' for Russian etc.
+Quoi qu'il en soit, voici comment cela fonctionne.
 
-Every directory has a menu.xml file that contains description of contents 
-structure which is loaded to the sidebar in help browser to help navigating 
-contents of the documentation.
+Chaque traduction possède son propre répertoire nommé d'après le code de langue à deux lettres, par exemple 'fr' pour le français, 'de' pour l'allemand, 'ru' pour le russe, etc.
 
-Currently for each language that used to have a translator (before 0.5 was out) 
-menu.xml points to English files, that is: file="../en/some.html"
+Chaque répertoire contient un fichier menu.xml qui décrit la structure du contenu et qui est chargé dans la barre latérale du navigateur d'aide pour faciliter la navigation dans le contenu de la documentation.
 
-When we are mostly ready, all you will need to do is copy ../en/*.html to 
-your language directory and start translating.
+Actuellement, pour chaque langue qui avait un traducteur (avant la sortie de la version 0.5), menu.xml pointe vers les fichiers anglais, c'est-à-dire : file="../en/some.html"
+
+Lorsque nous serons la plupart du temps prêts, tout ce que vous aurez à faire sera de copier ../en/*.html dans le répertoire de votre langue et de commencer à traduire.
